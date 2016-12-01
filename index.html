@@ -8,7 +8,6 @@
 </head>
 <body>
   <h1>Does file exist?</h1>
-  <p id="answer">???</p>
 
   <script>
   var filePath = 'song.mp3';
@@ -18,15 +17,11 @@
     type:'HEAD',
     error: function() {
       console.log('does not exist');
-      answerText = 'No';
     },
     success: function() {
       console.log('exists');
-      answerText = 'Yes';
     }
   });
-
-  $('#answer').text(answerText);
   </script>
 </body>
 </html>
